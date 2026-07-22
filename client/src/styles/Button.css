@@ -1,0 +1,104 @@
+/* Buttons */
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 42px;
+    padding: 10px 22px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.course-toolbar .btn {
+    min-width: 155px;
+    height: 46px;
+}
+
+/* Primary */
+
+.btn-primary {
+    background: #1E3A8A;
+    border: none;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: #162F6A;
+    color: #FFFFFF;
+}
+
+/* Secondary */
+
+.btn-secondary {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background: #F3F4F6;
+}
+
+/* Danger */
+
+.btn-danger {
+    background: #DC2626;
+    border: none;
+    color: #FFFFFF;
+}
+
+.btn-danger:hover {
+    background: #B91C1C;
+    color: #FFFFFF;
+}
+
+/* States */
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-danger:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-danger:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.12);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-danger:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+    transform: none;
+
+    box-shadow: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .course-toolbar .btn {
+        width: 100%;
+        min-width: 0;
+    }
+}

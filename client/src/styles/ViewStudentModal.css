@@ -1,0 +1,94 @@
+/* View Student Modal */
+
+.info-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #6B7280;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.info-value {
+    display: flex;
+    align-items: center;
+
+    min-height: 44px;
+    padding: 10px 14px;
+
+    background: #F9FAFB;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.info-value:hover {
+    background: #F3F4F6;
+}
+
+/* Close Button */
+
+.close-modal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 110px;
+    padding: 9px 22px;
+
+    background: #1E3A8A;
+
+    border: none;
+    border-radius: 8px;
+
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.close-modal-btn:hover {
+    background: #162F6A;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 8px 18px rgba(30, 58, 138, 0.18);
+}
+
+.close-modal-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .info-value {
+        min-height: 42px;
+        padding: 10px 12px;
+
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .close-modal-btn {
+        width: 100%;
+    }
+}

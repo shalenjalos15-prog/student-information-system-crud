@@ -1,0 +1,227 @@
+/* Student Table */
+
+.student-table-card {
+    padding-top: 16px;
+
+    background: transparent;
+
+    border-top: 1px solid #E5E7EB;
+}
+
+.table-responsive {
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Table */
+
+.student-table-card table {
+    width: 100%;
+
+    margin: 0;
+
+    border-collapse: collapse;
+}
+
+.student-table-card thead th {
+    position: sticky;
+    top: 0;
+
+    z-index: 1;
+
+    padding: 14px 16px;
+
+    background: #F8FAFC;
+
+    border-bottom: 1px solid #E2E8F0;
+
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-align: center;
+    vertical-align: middle;
+
+    white-space: nowrap;
+}
+
+.student-table-card tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.student-table-card tbody tr:hover {
+    background: #F8FAFC;
+}
+
+.student-table-card tbody td {
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #F1F5F9;
+
+    color: #334155;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.student-table-card tbody td:nth-child(2) {
+    color: #1F2937;
+    font-weight: 600;
+}
+
+.student-id {
+    width: 130px;
+    min-width: 130px;
+
+    color: #1E293B;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.student-name {
+    min-width: 180px;
+
+    color: #1F2937;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.student-course {
+    width: 120px;
+    min-width: 120px;
+
+    color: #1E293B;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.empty-table {
+    padding: 40px 16px !important;
+
+    color: #64748B;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Status */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 72px;
+    padding: 5px 12px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.status-active {
+    background: #DCFCE7;
+    color: #15803D;
+}
+
+.status-inactive {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+/* Action Buttons */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.student-table-card .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.student-table-card .btn:hover {
+    transform: translateY(-1px);
+}
+
+.student-table-card .btn:focus-visible {
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+}
+
+.student-table-card .btn i {
+    font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .student-table-card table {
+        min-width: 850px;
+    }
+}
+
+@media (max-width: 768px) {
+    .student-table-card {
+        padding-top: 12px;
+    }
+
+    .student-table-card table {
+        min-width: 760px;
+    }
+
+    .student-table-card th,
+    .student-table-card td {
+        padding: 12px;
+
+        font-size: 13px;
+    }
+
+    .action-buttons {
+        gap: 6px;
+    }
+
+    .student-table-card .btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .student-table-card .btn i {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .student-table-card table {
+        min-width: 700px;
+    }
+
+    .student-table-card th,
+    .student-table-card td {
+        white-space: nowrap;
+    }
+}

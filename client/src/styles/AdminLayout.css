@@ -1,0 +1,48 @@
+/* Admin Layout */
+
+.admin-layout {
+    min-height: 100vh;
+    background: #F5F7FB;
+}
+
+/* Main Content */
+
+.admin-main {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    margin-left: 230px;
+
+    transition: margin-left 0.25s ease;
+}
+
+/* Collapsed Sidebar */
+
+.admin-main.collapsed {
+    margin-left: 78px;
+}
+
+/* Page Content */
+
+.admin-content {
+    flex: 1;
+
+    padding: 24px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .admin-main,
+    .admin-main.collapsed {
+        margin-left: 0;
+    }
+
+    .admin-content {
+        padding: 16px;
+    }
+}

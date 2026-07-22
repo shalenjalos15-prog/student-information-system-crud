@@ -1,0 +1,147 @@
+/* Welcome Banner */
+
+.welcome-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-height: 110px;
+    margin-bottom: 12px;
+    padding: 21px 28px;
+    background: linear-gradient(135deg, var(--primary), #162F6A);
+    border-radius: 12px;
+    color: #FFFFFF;
+    box-shadow: var(--shadow);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.welcome-banner:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* Left Content */
+
+.welcome-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+}
+
+.welcome-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.welcome-icon i {
+    font-size: 28px;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.welcome-banner h2 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.welcome-banner p {
+    max-width: 600px;
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Date & Time */
+
+.welcome-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.welcome-date,
+.welcome-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.welcome-date i,
+.welcome-time i {
+    font-size: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+    .welcome-banner {
+        padding: 18px 20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .welcome-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .welcome-left {
+        width: 100%;
+    }
+
+    .welcome-banner h2 {
+        font-size: 20px;
+    }
+
+    .welcome-banner p {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 576px) {
+    .welcome-banner {
+        padding: 16px;
+    }
+
+    .welcome-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .welcome-icon i {
+        font-size: 20px;
+    }
+
+    .welcome-banner h2 {
+        font-size: 18px;
+    }
+}

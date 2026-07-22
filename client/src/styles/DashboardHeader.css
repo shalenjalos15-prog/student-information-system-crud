@@ -1,0 +1,172 @@
+/* Header */
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 74px;
+    padding: 0 34px;
+
+    background: #FFFFFF;
+
+    border-bottom: 1px solid #E9EDF4;
+
+    position: relative;
+    z-index: 20;
+}
+
+/* Header Sections */
+
+.app-header-left,
+.app-header-center,
+.app-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.app-header-center {
+    flex: 1;
+}
+
+.app-header-right {
+    gap: 18px;
+}
+
+/* Icon Button */
+
+.header-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.header-icon-btn:hover {
+    background: #F5F7FB;
+}
+
+.header-icon-btn i {
+    color: #1F2A44;
+    font-size: 28px;
+}
+
+/* Profile */
+
+.profile-menu-wrapper {
+    position: relative;
+}
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 6px 10px;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.profile-button:hover {
+    background: #F5F7FB;
+}
+
+.profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: #EEF3FF;
+
+    border-radius: 50%;
+
+    color: #1E3A8A;
+
+    flex-shrink: 0;
+}
+
+.profile-avatar i {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.profile-label {
+    color: #1F2937;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.profile-arrow {
+    margin-left: 2px;
+
+    color: #374151;
+    font-size: 16px;
+
+    transition: transform 0.2s ease;
+}
+
+.profile-arrow.rotate {
+    transform: rotate(180deg);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .app-header {
+        height: 68px;
+        padding: 0 16px;
+    }
+
+    .app-header-right {
+        gap: 12px;
+    }
+
+    .profile-button {
+        padding: 6px;
+    }
+
+    .profile-label {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-icon-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .header-icon-btn i {
+        font-size: 24px;
+    }
+
+    .profile-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .profile-avatar i {
+        font-size: 22px;
+    }
+}

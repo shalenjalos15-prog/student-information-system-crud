@@ -1,0 +1,130 @@
+/* Input Field */
+
+.input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+/* Input */
+
+.input-wrapper .form-control {
+    height: 44px;
+
+    background: #FFFFFF;
+
+    border: 1.5px solid #D1D5DB;
+    border-radius: 10px;
+
+    color: #374151;
+    font-size: 14px;
+    font-weight: 400;
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.input-wrapper .form-control::placeholder {
+    color: #9CA3AF;
+}
+
+/* States */
+
+.input-wrapper .form-control:focus {
+    border-color: #1E3A8A;
+    box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+}
+
+.input-wrapper .form-control:read-only {
+    background: #F9FAFB;
+
+    border-color: #E5E7EB;
+
+    color: #374151;
+}
+
+.input-wrapper .form-control:disabled {
+    background: #F3F4F6;
+
+    border-color: #E5E7EB;
+
+    color: #6B7280;
+
+    cursor: not-allowed;
+}
+
+.input-wrapper .form-control.is-invalid {
+    border-color: #DC2626 !important;
+}
+
+.input-wrapper .form-control.is-invalid:focus {
+    border-color: #DC2626 !important;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+}
+
+/* Input Icon */
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+
+    transform: translateY(-50%);
+
+    color: #6B7280;
+    font-size: 15px;
+
+    pointer-events: none;
+
+    transition: color 0.18s ease;
+}
+
+.input-wrapper:focus-within .input-icon {
+    color: #1E3A8A;
+}
+
+.form-control.has-icon {
+    padding-left: 42px;
+}
+
+/* Validation */
+
+.input-wrapper .invalid-feedback {
+    display: block !important;
+
+    margin-top: 6px;
+
+    color: #DC2626;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.form-text {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .input-wrapper .form-control {
+        height: 42px;
+        font-size: 13px;
+    }
+
+    .input-icon {
+        font-size: 14px;
+    }
+}

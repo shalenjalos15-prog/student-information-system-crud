@@ -1,0 +1,156 @@
+/* Content */
+
+.confirm-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 12px 8px 6px;
+
+    text-align: center;
+}
+
+/* Icon */
+
+.confirm-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 72px;
+    height: 72px;
+
+    margin-bottom: 24px;
+
+    background: linear-gradient(
+        180deg,
+        #FEE2E2 0%,
+        #FECACA 100%
+    );
+
+    border-radius: 50%;
+
+    color: #DC2626;
+
+    box-shadow:
+        0 8px 20px rgba(220, 38, 38, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.confirm-icon i {
+    font-size: 34px;
+    line-height: 1;
+}
+
+.confirm-icon:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 12px 24px rgba(220, 38, 38, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Text */
+
+.confirm-title {
+    margin: 0 0 12px;
+
+    color: #111827;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.3px;
+}
+
+.confirm-message {
+    max-width: 340px;
+    margin: 0;
+
+    color: #6B7280;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.confirm-message strong {
+    color: #374151;
+    font-weight: 600;
+}
+
+/* Footer */
+
+.modal-footer {
+    gap: 12px;
+}
+
+.modal-footer .btn {
+    min-width: 120px;
+}
+
+.modal-footer .btn-danger {
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.modal-footer .btn-danger:hover {
+    transform: translateY(-1px);
+
+    box-shadow: 0 10px 22px rgba(220, 38, 38, 0.22);
+}
+
+.modal-footer .btn-secondary {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+
+@media (max-width: 576px) {
+    .confirm-modal-content {
+        max-width: 100%;
+        padding: 8px 0;
+    }
+
+    .confirm-icon {
+        width: 64px;
+        height: 64px;
+
+        margin-bottom: 20px;
+    }
+
+    .confirm-icon i {
+        font-size: 30px;
+    }
+
+    .confirm-title {
+        font-size: 20px;
+    }
+
+    .confirm-message {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .modal-footer {
+        gap: 10px;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+        min-width: 0;
+    }
+}

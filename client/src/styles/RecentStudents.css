@@ -1,0 +1,209 @@
+/* Recent Students */
+
+.recent-students {
+    margin-top: 24px;
+    padding: 24px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E8EDF5;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+/* Header */
+
+.recent-students-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.recent-students-header h3 {
+    margin: 0;
+
+    color: #1E293B;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.recent-students-header p {
+    margin-top: 4px;
+
+    color: #64748B;
+    font-size: 0.9rem;
+}
+
+/* Body */
+
+.recent-students-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Student Item */
+
+.recent-student-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+
+    transition: 0.2s ease;
+}
+
+.recent-student-item:hover {
+    border-color: #2563EB;
+
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+}
+
+/* Student Info */
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.student-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    background: #EFF6FF;
+
+    border-radius: 50%;
+
+    color: #2563EB;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    flex-shrink: 0;
+}
+
+.student-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-name {
+    margin: 0;
+
+    color: #1E293B;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.student-number {
+    margin-top: 3px;
+
+    color: #64748B;
+    font-size: 13px;
+}
+
+.student-course {
+    margin: 6px 0 0;
+
+    color: #475569;
+    font-size: 14px;
+}
+
+/* Actions */
+
+.student-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Status */
+
+.status-badge {
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #DCFCE7;
+    color: #15803D;
+}
+
+.status-inactive {
+    background: #FEF3C7;
+    color: #B45309;
+}
+
+/* Footer */
+
+.recent-students-footer {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 22px;
+    padding-top: 18px;
+
+    border-top: 1px solid #EEF2F7;
+}
+
+.view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #2563EB;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.view-all-link:hover {
+    gap: 12px;
+
+    color: #1D4ED8;
+}
+
+/* States */
+
+.recent-state {
+    padding: 40px;
+
+    color: #64748B;
+    text-align: center;
+}
+
+.recent-state.error {
+    color: #DC2626;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .recent-student-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .student-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
