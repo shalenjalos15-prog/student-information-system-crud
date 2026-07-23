@@ -125,7 +125,7 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
 
            if (!email.trim()) {
                newErrors.email = "This field is required.";
-            } else if (!/^[A-Za-z0-9._%+-]+@gmail\.com$/.test(email.trim())) {
+            } else if (!/^[A-Za-z0-9._%+-]+@gmail\.com$/i.test(email.trim())) {
                 newErrors.email = "Please enter a valid Gmail address.";
             }
 
@@ -306,8 +306,8 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
                     type="email"
                     value={email}
                     onChange={(e) => {
-                        const value = e.target.value.replace(/[^A-Za-z\s]/g, "");
-                        setLastName(value);
+                        const value = e.target.value.replace(/[^A-Za-z0-9._%+-@]/g, "");
+                        setEmail(value);
 
                         if (errors.email) {
                             setErrors((prev) => ({
