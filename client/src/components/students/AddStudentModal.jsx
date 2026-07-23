@@ -121,6 +121,27 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
 
             if (!dob) {
                 newErrors.dob = "This field is required.";
+            } else {
+                const today = new Date();
+                const birthDate = new Date(dob);
+
+                let age = today.getFullYear() - birthDate.getFullYear();
+                const monthDiff = today.getMonth() - birthDate.getMonth();
+
+                if (
+                    monthDiff < 0 ||
+                    (monthDiff === 0 && today.getDate() < birthDate.getDate())
+                ) {
+                    age--;
+                }
+
+                if (birthDate > today) {
+                    newErrors.dob = "Date of birth cannot be in the future.";
+                } else if (birthDate.getFullYear() < 1900) {
+                    newErrors.dob = "Please enter a valid date of birth.";
+                } else if (age < 16) {
+                    newErrors.dob = "Student must be at least 16 years old.";
+                }
             }
 
            if (!email.trim()) {
@@ -285,6 +306,7 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
                             }));
                         }
                     }}
+                    max={new Date().toISOString().split("T")[0]}
                     required
                     error={errors.dob}
                 /> 
