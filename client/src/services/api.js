@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost/StudentInformationSystem/server/api";
+const BASE_URL = "https://studentinfosystem.infinityfree.io/server/api";
 
 async function request(endpoint, options = {}) {
     const response = await fetch(`${BASE_URL}${endpoint}`, {

@@ -2,10 +2,10 @@
 
 class Database
 {
-    private string $host = "localhost";
-    private string $databaseName = "student_information_system";
-    private string $username = "root";
-    private string $password = "";
+    private string $host = "sql210.infinityfree.com";
+    private string $databaseName = "if0_42474269_student_information_system";
+    private string $username = "if0_42474269";
+    private string $password = "ndXwtl80E0qP6R";
 
     private ?PDO $connection = null;
 
