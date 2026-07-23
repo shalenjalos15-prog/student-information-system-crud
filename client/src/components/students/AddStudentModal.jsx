@@ -105,10 +105,14 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
 
             if (!firstName.trim()) {
               newErrors.firstName = "This field is required.";
+            } else if (!/^[A-Za-z\s]+$/.test(firstName.trim())) {
+                newErrors.firstName = "First name must contain letters only.";
             }
 
             if (!lastName.trim()) {
               newErrors.lastName = "This field is required.";
+            } else if (!/^[A-Za-z\s]+$/.test(lastName.trim())) {
+                newErrors.lastName = "Last name must contain letters only.";
             }
 
             if (!gender) {
@@ -121,10 +125,14 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
 
            if (!email.trim()) {
                newErrors.email = "This field is required.";
+            } else if (!/^[A-Za-z0-9._%+-]+@gmail\.com$/.test(email.trim())) {
+                newErrors.email = "Please enter a valid Gmail address.";
             }
 
            if (!contact.trim()) {
               newErrors.contact = "This field is required.";
+            } else if (!/^09\d{9}$/.test(contact.trim())) {
+                newErrors.contact = "Contact number must be 11 digits and start with 09.";
             }
 
            if (!course) {
@@ -203,7 +211,8 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
                     id="firstName"
                     value={firstName}
                     onChange={(e) => {
-                        setFirstName(e.target.value);
+                        const value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+                        setFirstName(value);
 
                         if (errors.firstName) {
                             setErrors((prev) => ({
@@ -224,7 +233,8 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
                     id="lastName"
                     value={lastName}
                     onChange={(e) => {
-                        setLastName(e.target.value);
+                        const value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+                        setLastName(value);
 
                         if (errors.lastName) {
                             setErrors((prev) => ({
@@ -296,7 +306,8 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
                     type="email"
                     value={email}
                     onChange={(e) => {
-                        setEmail(e.target.value);
+                        const value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+                        setLastName(value);
 
                         if (errors.email) {
                             setErrors((prev) => ({
@@ -317,7 +328,8 @@ function AddStudentModal({ show, onClose, student, isEditMode, onSubmit, courses
                     id="contact"
                     value={contact}
                     onChange={(e) => {
-                        setContact(e.target.value);
+                        const value = e.target.value.replace(/\D/g, "").slice(0, 11);
+                        setContact(value);
 
                         if (errors.contact) {
                             setErrors((prev) => ({
